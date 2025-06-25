@@ -19,11 +19,15 @@ const state = reactive({
     createdAT:''
   },
 });
-const submit = () => {
-  httpService.addItem(state.memo);
-  window.alert("저장했습니다");
-  router.push({ path: "/" });
-};
+const submit = () => {    
+    if(route.params.id) {
+        httpService.setItem(state.memo);
+    } else {
+        httpService.addItem(state.memo);
+    }
+    alert('저장했습니다.');
+    router.push({ path: '/' });
+}
 
 onMounted(async()=>{
     if(route.params.id){//값이 있다면 item 클릭 , 없다면 [+추가하기] 버튼클릭 
