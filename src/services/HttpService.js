@@ -11,4 +11,9 @@ export class HttpService {
         const result = await axios.get('http://localhost:8080/memo');        
         return result.data;
     }
+    async getItem(id){
+        const result = await axios.get(`http://localhost:8080/memo/${id}`);        
+        return result.data;
+    }
 }
+// 통신담당 ,엑시오스를 쓴다 

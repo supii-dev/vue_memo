@@ -29,6 +29,7 @@ onMounted(async () => {
       </div>
     </router-link>
     <router-link to="/memos/add" class="add btn btn-light">
+      <!-- 라우터 뷰의 주소를 바꾸겠다 -->
       +추가하기
     </router-link>
   </div>

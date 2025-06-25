@@ -11,6 +11,7 @@ const router = createRouter({
       path: "/memos/add",
       name: "memoAdd",
       component: () => import("@/views/Form.vue"),
+      // 폼. 뷰의 내용을 넣겠다
     },
     {
       path: "/memos/:id",
